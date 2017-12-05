@@ -15,6 +15,9 @@
 		4D601CA61FD5B79A00F8585C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D601CA41FD5B79A00F8585C /* LaunchScreen.storyboard */; };
 		4D601CB11FD5B79A00F8585C /* TableOfPersonsMultiscreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D601CB01FD5B79A00F8585C /* TableOfPersonsMultiscreenTests.swift */; };
 		4D601CBC1FD5B79A00F8585C /* TableOfPersonsMultiscreenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D601CBB1FD5B79A00F8585C /* TableOfPersonsMultiscreenUITests.swift */; };
+		4D601CCD1FD5B95100F8585C /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D601CCB1FD5B95100F8585C /* PersonTableViewCell.swift */; };
+		4D601CD01FD5FAF600F8585C /* PersonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D601CCF1FD5FAF600F8585C /* PersonDetailViewController.swift */; };
+		4D601CD21FD635BE00F8585C /* CreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D601CD11FD635BE00F8585C /* CreationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		4D601CB71FD5B79A00F8585C /* TableOfPersonsMultiscreenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableOfPersonsMultiscreenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D601CBB1FD5B79A00F8585C /* TableOfPersonsMultiscreenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableOfPersonsMultiscreenUITests.swift; sourceTree = "<group>"; };
 		4D601CBD1FD5B79A00F8585C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D601CCB1FD5B95100F8585C /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
+		4D601CCF1FD5FAF600F8585C /* PersonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewController.swift; sourceTree = "<group>"; };
+		4D601CD11FD635BE00F8585C /* CreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +105,12 @@
 		4D601C971FD5B79A00F8585C /* TableOfPersonsMultiscreen */ = {
 			isa = PBXGroup;
 			children = (
+				4D601CCB1FD5B95100F8585C /* PersonTableViewCell.swift */,
 				4D601C981FD5B79A00F8585C /* AppDelegate.swift */,
 				4D601C9A1FD5B79A00F8585C /* ViewController.swift */,
 				4D601C9C1FD5B79A00F8585C /* Main.storyboard */,
+				4D601CD11FD635BE00F8585C /* CreationViewController.swift */,
+				4D601CCF1FD5FAF600F8585C /* PersonDetailViewController.swift */,
 				4D601CA21FD5B79A00F8585C /* Assets.xcassets */,
 				4D601CA41FD5B79A00F8585C /* LaunchScreen.storyboard */,
 				4D601CA71FD5B79A00F8585C /* Info.plist */,
@@ -264,7 +273,10 @@
 			files = (
 				4D601C9B1FD5B79A00F8585C /* ViewController.swift in Sources */,
 				4D601C991FD5B79A00F8585C /* AppDelegate.swift in Sources */,
+				4D601CCD1FD5B95100F8585C /* PersonTableViewCell.swift in Sources */,
+				4D601CD01FD5FAF600F8585C /* PersonDetailViewController.swift in Sources */,
 				4D601CA11FD5B79A00F8585C /* TableOfPersonsMultiscreen.xcdatamodeld in Sources */,
+				4D601CD21FD635BE00F8585C /* CreationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
