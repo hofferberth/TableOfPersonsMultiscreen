@@ -14,28 +14,12 @@ class ViewController: UITableViewController {
     
     @IBOutlet weak var table: UITableView!
     
-    let avatar1 = UIImage(imageLiteralResourceName: "bill")
-    let avatar2 = UIImage(imageLiteralResourceName: "tinyface")
-    let avatar3 = UIImage(imageLiteralResourceName: "salad")
-    
-    var initialized = false
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        populateTable()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-    }
-    
-    func populateTable() {
-        var tempPerson = Person(avatar: avatar1, firstName: "Bill", lastName: "Ensofli", age: 46, address: "123 Street Rd", ssn: "123-45-6789", job: "Professional Businessman", education: Person.Education.bachelors)
-        persons.append(tempPerson)
-        tempPerson = Person(avatar: avatar2, firstName: "Carol", lastName: "Krisman", age: 34, address: "456 Boulevard St", ssn: "987-65-4321", job: "Amateur Christmas Caroler", education: Person.Education.streetSmarts)
-        persons.append(tempPerson)
-        tempPerson = Person(avatar: avatar3, firstName: "Jimmy", lastName: "Russel", age: 19, address: "1 One Ave", ssn: "111-11-1112", job: "Salad Whisperer", education: Person.Education.phd)
-        persons.append(tempPerson)
     }
     
     @IBAction func editButtonPressed(_ sender: Any) {
