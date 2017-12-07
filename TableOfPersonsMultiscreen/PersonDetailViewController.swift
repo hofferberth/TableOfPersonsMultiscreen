@@ -10,15 +10,17 @@ import UIKit
 
 class PersonDetailViewController: UIViewController {
     
-    var person: Person? = nil
+    var person: SWCharacter? = nil
     
-    @IBOutlet weak var avatar: UIImageView!
     @IBOutlet weak var name: UILabel!
-    @IBOutlet weak var age: UILabel!
-    @IBOutlet weak var address: UILabel!
-    @IBOutlet weak var ssn: UILabel!
-    @IBOutlet weak var job: UILabel!
-    @IBOutlet weak var education: UILabel!
+    @IBOutlet weak var height: UILabel!
+    @IBOutlet weak var mass: UILabel!
+    @IBOutlet weak var hairColor: UILabel!
+    @IBOutlet weak var skinColor: UILabel!
+    @IBOutlet weak var eyeColor: UILabel!
+    @IBOutlet weak var birthYear: UILabel!
+    @IBOutlet weak var gender: UILabel!
+    @IBOutlet weak var homeworld: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,13 +31,30 @@ class PersonDetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    func displayData(person p: Person) {
-        avatar.image = p.avatar
-        name.text = "\(p.firstName) \(p.lastName)"
-        age.text = "\(p.age)"
-        address.text = p.address
-        ssn.text = p.ssn
-        job.text = p.job
-        education.text = "\(p.education)"
+    /*
+     self.name = jName
+     self.height = jHeight
+     self.mass = jMass
+     self.hairColor = jHairColor
+     self.skinColor = jSkinColor
+     self.eyeColor = jEyeColor
+     self.birthYear = jBirthYear
+     self.gender = jGender
+     self.homeworld = jHomeworld
+     self.films = [jFilms]
+     self.species = jSpecies
+     self.vehicles = [jVehicles]
+     self.starships = [jStarships]
+    */
+    func displayData(person p: SWCharacter) {
+        name.text = person?.name
+        height.text = person?.height
+        mass.text = person?.mass
+        hairColor.text = person?.hairColor
+        skinColor.text = person?.skinColor
+        eyeColor.text = person?.eyeColor
+        birthYear.text = person?.birthYear
+        gender.text = person?.gender
+        homeworld.text = person?.homeworld
     }
 }

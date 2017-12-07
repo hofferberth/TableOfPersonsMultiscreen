@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UITableViewController {
 
-    var persons: [Person] = []
+    var characters: [SWCharacter] = []
     
     @IBOutlet weak var table: UITableView!
     
@@ -37,11 +37,11 @@ class ViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowDetail" {
             if let detailView = segue.destination as? PersonDetailViewController {
-                detailView.person = persons[tableView.indexPathForSelectedRow!.row]
+                detailView.person = characters[tableView.indexPathForSelectedRow!.row]
             }
         } else if segue.identifier == "Create" {
             if let createView = segue.destination as? CreationViewController {
-                createView.receivedArr = persons
+                createView.receivedArr = characters
             }
         }
     }
@@ -51,17 +51,19 @@ class ViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return persons.count
+        return characters.count
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! PersonTableViewCell
         
-        cell.person = persons[indexPath.row]
+        cell.character = characters[indexPath.row]
         
         if indexPath.row % 2 == 1 {
             cell.backgroundColor = UIColor.lightGray
+        } else {
+            cell.backgroundColor = UIColor.white
         }
         
         return cell
@@ -71,7 +73,7 @@ class ViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        persons.remove(at: indexPath.row)
+        characters.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.fade)
     }
 }

@@ -18,8 +18,8 @@ class CreationViewController: UIViewController {
     @IBOutlet weak var job: UITextField!
     @IBOutlet weak var education: UISegmentedControl!
     
-    var person: Person?
-    var receivedArr: [Person] = []
+    var person: SWCharacter?
+    var receivedArr: [SWCharacter] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +47,7 @@ class CreationViewController: UIViewController {
     }
     
     func loadPerson() {
-        let first = firstName.text ?? "FUCK"
+/*        let first = firstName.text ?? "FUCK"
         let last = lastName.text ?? "FUCK"
         let a = Int(age.text ?? "FUCK") ?? -1
         let add = address.text ?? "FUCK"
@@ -67,6 +67,7 @@ class CreationViewController: UIViewController {
         }
         
         person = Person(firstName: first, lastName: last, age: a, address: add, ssn: social, job: j, education: edu)
+ */
     }
     
     // MARK: - Navigation
@@ -77,8 +78,7 @@ class CreationViewController: UIViewController {
             print(receivedArr.count)
             loadPerson()
             receivedArr.append(person!)
-            destView.persons = receivedArr
-            // destView.table.reloadData()
+            destView.characters = receivedArr
         } else if(segue.identifier == "Cancel") {
             // Do Nothing
         }
